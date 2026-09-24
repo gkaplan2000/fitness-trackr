@@ -9,6 +9,9 @@ const PageContext = createContext();
 
 export function PageProvider({ children }) {
   const [page, setPage] = useState("activities");
+
+
+  
   const value = { page, setPage };
   return <PageContext.Provider value={value}>{children}</PageContext.Provider>;
 }

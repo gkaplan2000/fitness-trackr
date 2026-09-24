@@ -3,10 +3,8 @@ import { createActivity } from "../api/activities";
 import { useAuth } from "../auth/AuthContext";
 
 /** Form for a user to create a new activity with a name and description. */
-export default function ActivityForm({ syncActivities }) {
+export default function ActivityForm({ syncActivities, error, setError }) {
   const { token } = useAuth();
-
-  const [error, setError] = useState(null);
 
   const tryCreateActivity = async (formData) => {
     setError(null);
